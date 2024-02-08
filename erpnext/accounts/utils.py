@@ -727,7 +727,10 @@ def update_reference_in_payment_entry(
 	if not skip_ref_details_update_for_pe:
 		payment_entry.set_missing_ref_details()
 	payment_entry.set_amounts()
+<<<<<<< HEAD
 
+=======
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 	payment_entry.make_exchange_gain_loss_journal(
 		frappe._dict({"difference_posting_date": d.difference_posting_date}), dimensions_dict
 	)

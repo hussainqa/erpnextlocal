@@ -78,7 +78,13 @@ class Subscription(Document):
 		purchase_tax_template: DF.Link | None
 		sales_tax_template: DF.Link | None
 		start_date: DF.Date | None
+<<<<<<< HEAD
 		status: DF.Literal["", "Trialing", "Active", "Past Due Date", "Cancelled", "Unpaid", "Completed"]
+=======
+		status: DF.Literal[
+			"", "Trialling", "Active", "Past Due Date", "Cancelled", "Unpaid", "Completed"
+		]
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 		submit_invoice: DF.Check
 		trial_period_end: DF.Date | None
 		trial_period_start: DF.Date | None

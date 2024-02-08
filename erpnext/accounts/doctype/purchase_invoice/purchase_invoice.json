@@ -1613,7 +1613,11 @@
  "idx": 204,
  "is_submittable": 1,
  "links": [],
+<<<<<<< HEAD
  "modified": "2024-01-26 10:46:00.469053",
+=======
+ "modified": "2023-11-29 15:35:44.697496",
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Purchase Invoice",

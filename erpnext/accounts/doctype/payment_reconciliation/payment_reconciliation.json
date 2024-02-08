@@ -230,7 +230,11 @@
  "is_virtual": 1,
  "issingle": 1,
  "links": [],
+<<<<<<< HEAD
  "modified": "2024-01-18 11:56:20.234667",
+=======
+ "modified": "2023-12-14 13:38:16.264013",
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Payment Reconciliation",

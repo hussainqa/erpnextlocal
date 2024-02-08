@@ -727,7 +727,10 @@ def get_available_item_locations(
 			required_qty,
 			company,
 			total_picked_qty,
+<<<<<<< HEAD
 			consider_rejected_warehouses=consider_rejected_warehouses,
+=======
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 		)
 	elif has_serial_no:
 		locations = get_available_item_locations_for_serialized_item(
@@ -793,6 +796,7 @@ def get_available_item_locations_for_serial_and_batched_item(
 	required_qty,
 	company,
 	total_picked_qty=0,
+<<<<<<< HEAD
 	consider_rejected_warehouses=False,
 ):
 	# Get batch nos by FIFO
@@ -838,6 +842,46 @@ def get_available_item_locations_for_serialized_item(
 	total_picked_qty=0,
 	consider_rejected_warehouses=False,
 ):
+=======
+):
+	# Get batch nos by FIFO
+	locations = get_available_item_locations_for_batched_item(
+		item_code,
+		from_warehouses,
+		required_qty,
+		company,
+	)
+
+	if locations:
+		sn = frappe.qb.DocType("Serial No")
+		conditions = (sn.item_code == item_code) & (sn.company == company)
+
+		for location in locations:
+			location.qty = (
+				required_qty if location.qty > required_qty else location.qty
+			)  # if extra qty in batch
+
+			serial_nos = (
+				frappe.qb.from_(sn)
+				.select(sn.name)
+				.where(
+					(conditions) & (sn.batch_no == location.batch_no) & (sn.warehouse == location.warehouse)
+				)
+				.orderby(sn.creation)
+				.limit(ceil(location.qty + total_picked_qty))
+			).run(as_dict=True)
+
+			serial_nos = [sn.name for sn in serial_nos]
+			location.serial_nos = serial_nos
+			location.qty = len(serial_nos)
+
+	return locations
+
+
+def get_available_item_locations_for_serialized_item(
+	item_code, from_warehouses, required_qty, company, total_picked_qty=0
+):
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 	picked_serial_nos = get_picked_serial_nos(item_code, from_warehouses)
 
 	sn = frappe.qb.DocType("Serial No")

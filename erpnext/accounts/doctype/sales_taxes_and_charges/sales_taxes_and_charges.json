@@ -218,7 +218,11 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
+<<<<<<< HEAD
  "modified": "2022-10-18 13:08:17.776528",
+=======
+ "modified": "2024-01-14 10:08:17.776528",
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Taxes and Charges",

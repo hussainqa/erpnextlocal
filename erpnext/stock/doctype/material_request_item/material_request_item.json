@@ -474,6 +474,7 @@
    "fieldtype": "Link",
    "label": "WIP Composite Asset",
    "options": "Asset"
+<<<<<<< HEAD
   },
   {
    "fieldname": "price_list_rate",
@@ -483,13 +484,19 @@
    "options": "currency",
    "print_hide": 1,
    "read_only": 1
+=======
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
   }
  ],
  "idx": 1,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
+<<<<<<< HEAD
  "modified": "2024-02-08 16:30:56.137858",
+=======
+ "modified": "2023-11-14 18:37:59.599115",
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Material Request Item",

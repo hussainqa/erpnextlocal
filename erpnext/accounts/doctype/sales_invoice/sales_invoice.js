@@ -36,8 +36,24 @@ erpnext.accounts.SalesInvoiceController = class SalesInvoiceController extends e
 		var me = this;
 		super.onload();
 
+<<<<<<< HEAD
 		this.frm.ignore_doctypes_on_cancel_all = ['POS Invoice', 'Timesheet', 'POS Invoice Merge Log',
 			'POS Closing Entry', 'Journal Entry', 'Payment Entry', "Repost Payment Ledger", "Repost Accounting Ledger", "Unreconcile Payment", "Unreconcile Payment Entries", "Serial and Batch Bundle", "Bank Transaction",
+=======
+		this.frm.ignore_doctypes_on_cancel_all = [
+			"POS Invoice",
+			"Timesheet",
+			"POS Invoice Merge Log",
+			"POS Closing Entry",
+			"Journal Entry",
+			"Payment Entry",
+			"Repost Payment Ledger",
+			"Repost Accounting Ledger",
+			"Unreconcile Payment",
+			"Unreconcile Payment Entries",
+			"Serial and Batch Bundle",
+			"Bank Transaction",
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 		];
 
 		if(!this.frm.doc.__islocal && !this.frm.doc.customer && this.frm.doc.debit_to) {

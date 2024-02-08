@@ -29,6 +29,10 @@ def after_install():
 	add_company_to_session_defaults()
 	add_standard_navbar_items()
 	add_app_name()
+<<<<<<< HEAD
+=======
+	hide_workspaces()
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 	update_roles()
 	frappe.db.commit()
 
@@ -196,6 +200,14 @@ def add_app_name():
 	frappe.db.set_single_value("System Settings", "app_name", "ERPNext")
 
 
+<<<<<<< HEAD
+=======
+def hide_workspaces():
+	for ws in ["Integration", "Settings"]:
+		frappe.db.set_value("Workspace", ws, "public", 0)
+
+
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 def update_roles():
 	website_user_roles = ("Customer", "Supplier")
 	for role in website_user_roles:

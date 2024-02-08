@@ -352,6 +352,12 @@ def get_tds_docs_query(filters, bank_accounts, tds_accounts):
 	if filters.get("to_date"):
 		query = query.where(gle.posting_date <= filters.get("to_date"))
 
+<<<<<<< HEAD
+=======
+	if bank_accounts:
+		query = query.where(gle.against.notin(bank_accounts))
+
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 	if filters.get("party"):
 		party = [filters.get("party")]
 		jv_condition = gle.against.isin(party) | (
@@ -363,6 +369,7 @@ def get_tds_docs_query(filters, bank_accounts, tds_accounts):
 			(gle.voucher_type == "Journal Entry")
 			& ((gle.party_type == filters.get("party_type")) | (gle.party_type == ""))
 		)
+<<<<<<< HEAD
 
 	query.where((gle.account.isin(tds_accounts) & jv_condition) | gle.party.isin(party))
 	if bank_accounts:
@@ -371,6 +378,9 @@ def get_tds_docs_query(filters, bank_accounts, tds_accounts):
 			| gle.party.isin(party)
 		)
 
+=======
+	query = query.where((gle.account.isin(tds_accounts) & jv_condition) | gle.party.isin(party))
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 	return query
 
 

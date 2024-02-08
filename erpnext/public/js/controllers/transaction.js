@@ -825,7 +825,11 @@ erpnext.TransactionController = class TransactionController extends erpnext.taxe
 					}
 					let selling_doctypes_for_tc = ["Sales Invoice", "Quotation", "Sales Order", "Delivery Note"];
 					if (company_doc.default_selling_terms && frappe.meta.has_field(me.frm.doc.doctype, "tc_name") &&
+<<<<<<< HEAD
 					selling_doctypes_for_tc.includes(me.frm.doc.doctype) && !me.frm.doc.tc_name) {
+=======
+					selling_doctypes_for_tc.includes(me.frm.doc.doctype)  && !me.frm.doc.tc_name) {
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 						me.frm.set_value("tc_name", company_doc.default_selling_terms);
 					}
 					let buying_doctypes_for_tc = ["Request for Quotation", "Supplier Quotation", "Purchase Order",

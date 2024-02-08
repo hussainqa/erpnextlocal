@@ -81,6 +81,7 @@ class TestSalesOrder(FrappeTestCase):
 		)
 		update_child_qty_rate("Sales Order", trans_item, so.name)
 
+<<<<<<< HEAD
 	def test_sales_order_qty(self):
 		so = make_sales_order(qty=1, do_not_save=True)
 
@@ -104,6 +105,8 @@ class TestSalesOrder(FrappeTestCase):
 		so.save()
 		self.assertEqual(so.items[0].qty, 1)
 
+=======
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 	def test_make_material_request(self):
 		so = make_sales_order(do_not_submit=True)
 

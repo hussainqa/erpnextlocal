@@ -440,6 +440,10 @@ frappe.ui.form.on("Material Request Item", {
 		item.amount = flt(item.qty) * flt(item.rate);
 		frappe.model.set_value(doctype, name, "amount", item.amount);
 		refresh_field("amount", item.name, item.parentfield);
+<<<<<<< HEAD
+=======
+		frm.events.get_item_data(frm, item, false);
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 	},
 
 	item_code: function(frm, doctype, name) {

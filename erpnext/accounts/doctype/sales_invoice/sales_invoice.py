@@ -117,7 +117,10 @@ class SalesInvoice(SellingController):
 		discount_amount: DF.Currency
 		dispatch_address: DF.SmallText | None
 		dispatch_address_name: DF.Link | None
+<<<<<<< HEAD
 		dont_create_loyalty_points: DF.Check
+=======
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 		due_date: DF.Date | None
 		from_date: DF.Date | None
 		grand_total: DF.Currency

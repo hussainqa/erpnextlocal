@@ -1017,11 +1017,14 @@ class TestPurchaseReceipt(FrappeTestCase):
 	def test_stock_transfer_from_purchase_receipt_with_valuation(self):
 		from erpnext.stock.doctype.delivery_note.delivery_note import make_inter_company_purchase_receipt
 		from erpnext.stock.doctype.delivery_note.test_delivery_note import create_delivery_note
+<<<<<<< HEAD
 		from erpnext.stock.doctype.stock_reconciliation.test_stock_reconciliation import (
 			create_stock_reconciliation,
 		)
 		from erpnext.stock.get_item_details import get_valuation_rate
 		from erpnext.stock.utils import get_stock_balance
+=======
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 
 		prepare_data_for_internal_transfer()
 
@@ -1036,6 +1039,7 @@ class TestPurchaseReceipt(FrappeTestCase):
 			company="_Test Company with perpetual inventory",
 		)
 
+<<<<<<< HEAD
 		if (
 			get_valuation_rate(
 				pr1.items[0].item_code, "_Test Company with perpetual inventory", warehouse="Stores - TCP1"
@@ -1052,6 +1056,8 @@ class TestPurchaseReceipt(FrappeTestCase):
 				do_not_save=True,
 			)
 
+=======
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 		customer = "_Test Internal Customer 2"
 		company = "_Test Company with perpetual inventory"
 

@@ -824,7 +824,11 @@
  "image_field": "image",
  "is_tree": 1,
  "links": [],
+<<<<<<< HEAD
  "modified": "2024-01-24 02:20:26.145996",
+=======
+ "modified": "2024-01-03 17:36:20.984421",
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Employee",

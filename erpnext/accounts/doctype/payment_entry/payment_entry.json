@@ -776,7 +776,11 @@
    "table_fieldname": "payment_entries"
   }
  ],
+<<<<<<< HEAD
  "modified": "2024-01-08 13:17:15.744754",
+=======
+ "modified": "2024-01-03 12:46:41.759121",
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Payment Entry",

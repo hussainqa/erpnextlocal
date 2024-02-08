@@ -2162,6 +2162,7 @@
    "fieldname": "update_billed_amount_in_delivery_note",
    "fieldtype": "Check",
    "label": "Update Billed Amount in Delivery Note"
+<<<<<<< HEAD
   },
   {
    "default": "0",
@@ -2170,6 +2171,8 @@
    "fieldtype": "Check",
    "label": "Don't Create Loyalty Points",
    "no_copy": 1
+=======
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
   }
  ],
  "icon": "fa fa-file-text",
@@ -2182,7 +2185,11 @@
    "link_fieldname": "consolidated_invoice"
   }
  ],
+<<<<<<< HEAD
  "modified": "2024-01-02 17:25:46.027523",
+=======
+ "modified": "2023-11-23 16:56:29.679499",
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Invoice",

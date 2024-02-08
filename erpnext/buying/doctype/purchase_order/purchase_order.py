@@ -614,6 +614,7 @@ class PurchaseOrder(BuyingController):
 
 		return result
 
+<<<<<<< HEAD
 	def update_ordered_qty_in_so_for_removed_items(self, removed_items):
 		"""
 		Updates ordered_qty in linked SO when item rows are removed using Update Items
@@ -633,6 +634,13 @@ class PurchaseOrder(BuyingController):
 			if frappe.db.get_single_value("Buying Settings", "auto_create_subcontracting_order"):
 				make_subcontracting_order(self.name, save=True, notify=True)
 
+=======
+	def auto_create_subcontracting_order(self):
+		if self.is_subcontracted and not self.is_old_subcontracting_flow:
+			if frappe.db.get_single_value("Buying Settings", "auto_create_subcontracting_order"):
+				make_subcontracting_order(self.name, save=True, notify=True)
+
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 	def update_subcontracting_order_status(self):
 		from erpnext.subcontracting.doctype.subcontracting_order.subcontracting_order import (
 			update_subcontracting_order_status as update_sco_status,

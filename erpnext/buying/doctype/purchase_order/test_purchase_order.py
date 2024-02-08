@@ -29,8 +29,11 @@ from erpnext.stock.doctype.purchase_receipt.purchase_receipt import (
 class TestPurchaseOrder(FrappeTestCase):
 	def test_purchase_order_qty(self):
 		po = create_purchase_order(qty=1, do_not_save=True)
+<<<<<<< HEAD
 
 		# NonNegativeError with qty=-1
+=======
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 		po.append(
 			"items",
 			{
@@ -41,6 +44,7 @@ class TestPurchaseOrder(FrappeTestCase):
 		)
 		self.assertRaises(frappe.NonNegativeError, po.save)
 
+<<<<<<< HEAD
 		# InvalidQtyError with qty=0
 		po.items[1].qty = 0
 		self.assertRaises(InvalidQtyError, po.save)
@@ -50,6 +54,11 @@ class TestPurchaseOrder(FrappeTestCase):
 		po.save()
 		self.assertEqual(po.items[1].qty, 1)
 
+=======
+		po.items[1].qty = 0
+		self.assertRaises(InvalidQtyError, po.save)
+
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 	def test_make_purchase_receipt(self):
 		po = create_purchase_order(do_not_submit=True)
 		self.assertRaises(frappe.ValidationError, make_purchase_receipt, po.name)
@@ -1045,6 +1054,7 @@ class TestPurchaseOrder(FrappeTestCase):
 
 		self.assertTrue(frappe.db.get_value("Subcontracting Order", {"purchase_order": po.name}))
 
+<<<<<<< HEAD
 	def test_purchase_order_advance_payment_status(self):
 		from erpnext.accounts.doctype.payment_entry.test_payment_entry import get_payment_entry
 		from erpnext.accounts.doctype.payment_request.payment_request import make_payment_request
@@ -1072,6 +1082,8 @@ class TestPurchaseOrder(FrappeTestCase):
 			frappe.db.get_value(po.doctype, po.name, "advance_payment_status"), "Not Initiated"
 		)
 
+=======
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 
 def prepare_data_for_internal_transfer():
 	from erpnext.accounts.doctype.sales_invoice.test_sales_invoice import create_internal_supplier

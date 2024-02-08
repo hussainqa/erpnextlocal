@@ -1024,6 +1024,7 @@ class AccountsController(TransactionBase):
 			return flt(args.get(field, 0) / self.get("conversion_rate", 1))
 
 	def validate_qty_is_not_zero(self):
+<<<<<<< HEAD
 		for item in self.items:
 			if self.doctype == "Purchase Receipt" and item.rejected_qty:
 				continue
@@ -1033,6 +1034,15 @@ class AccountsController(TransactionBase):
 					msg=_("Row #{0}: Quantity for Item {1} cannot be zero.").format(
 						item.idx, frappe.bold(item.item_code)
 					),
+=======
+		if self.doctype == "Purchase Receipt":
+			return
+
+		for item in self.items:
+			if not flt(item.qty):
+				frappe.throw(
+					msg=_("Row #{0}: Item quantity cannot be zero").format(item.idx),
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 					title=_("Invalid Quantity"),
 					exc=InvalidQtyError,
 				)

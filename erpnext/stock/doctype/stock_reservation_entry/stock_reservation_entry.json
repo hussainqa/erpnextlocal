@@ -315,7 +315,11 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
+<<<<<<< HEAD
  "modified": "2024-02-07 16:05:17.772098",
+=======
+ "modified": "2023-10-19 16:41:16.545416",
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Stock Reservation Entry",

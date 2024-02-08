@@ -52,10 +52,13 @@ status_map = {
 		[
 			"To Deliver",
 			"eval:self.per_delivered < 100 and self.per_billed >= 100 and self.docstatus == 1 and not self.skip_delivery_note",
+<<<<<<< HEAD
 		],
 		[
 			"To Pay",
 			"eval:self.advance_payment_status == 'Requested' and self.docstatus == 1",
+=======
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 		],
 		[
 			"Completed",

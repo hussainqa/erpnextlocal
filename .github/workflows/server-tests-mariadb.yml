@@ -129,6 +129,7 @@ jobs:
       - name: Show bench output
         if: ${{ always() }}
         run: cat ~/frappe-bench/bench_start.log || true
+<<<<<<< HEAD
 
       - name: Upload coverage data
         uses: actions/upload-artifact@v3
@@ -156,3 +157,5 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true
           verbose: true
+=======
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1

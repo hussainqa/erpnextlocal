@@ -1876,7 +1876,11 @@ def get_split_invoice_rows(invoice: dict, payment_term_template: str, exc_rates:
 		"Payment Schedule", filters={"parent": invoice.voucher_no}, fields=["*"], order_by="due_date"
 	)
 	for payment_term in payment_schedule:
+<<<<<<< HEAD
 		if payment_term.outstanding <= 0.1:
+=======
+		if not payment_term.outstanding > 0.1:
+>>>>>>> db4efd333219ca20fff642d279c2388ef8e088d1
 			continue
 
 		doc_details = exc_rates.get(payment_term.parent, None)
